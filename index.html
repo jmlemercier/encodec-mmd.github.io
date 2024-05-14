@@ -86,12 +86,12 @@ This leads to an increase in the generated music quality when modelling the prod
             <p class="lead" align="justify">
                 We present here samples from MusicCaps, used for the subjective study presented in Table 1 of our paper.
                 </p><ul class="lead" align="justify">
-                  <li>The conditioning is the 3 second excerpt used to condition the model </li>
-                  <li>Textual inversion: for this method we use a 30 second excerpt containing these 3 seconds to perform the inversion </li>
-                  <li>MusicGen in continuation mode: given the conditioning we use MusicGen to continue it without any textual description </li>
-                  <li>CLAP conditioner: this model uses the CLAP embedding of the excerpt as conditioning</li>
-                  <li>Our model with EnCodec as a Feature Extractor and a 2 levels Residual Vector Quantization </li>
-                  <li>Our model with MERT as a Feature Extractor and a 2 levels Residual Vector Quantization </li>
+                  <li>The conditioning is a textual description obtained from the MusicCaps annotation </li>
+                  <li>MusicGen-MMD is our proposed method, using the EnCodec-MMD codec with promoted independence between codebooks </li>
+                  <li>MusicGen is retrained on the same internal dataset using similar instructions as in [1] </li>
+                  <li>AudioLDM [2] is a latent diffusion model using CLAP audio-textual embeddings </li>
+                  <li>AudioLDM2-Music is the music-specialized checkpoint of AudioLDM2 [3], which in addition to its predecessor [3] also leverages self-supervised general audio representation </li>
+                  <li>MusTango [4] is another latent diffusion model providing fine-grained control over music components such as rythm, chords, etc. It must be noted that MusTango was trained on an augmented version of MusicCaps, which is the test set here, and therefore largely overfits to the testing condition </li>
 
                 </ul>
             <p></p>
@@ -105,7 +105,7 @@ This leads to an increase in the generated music quality when modelling the prod
                 <table>
                     <tbody>
                     <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
-                        <th>Text Prompt</th><th>Reference</th><th>MusicGen-MMD</th><th>MusicGen [1]</th><th>AudioLDM [2]</th><th>AudioLDM2-Music [3]</th><th>Mustango [4]</th>
+                        <th>Reference</th><th>MusicGen-MMD</th><th>MusicGen [1]</th><th>AudioLDM [2]</th><th>AudioLDM2-Music [3]</th><th>Mustango [4]</th>
                     </tr>
                     <tr>
                         <tr style="border-top: 20px solid rgba(0, 0, 0, 0)">
