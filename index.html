@@ -121,14 +121,15 @@ This leads to an increase in the generated music quality when modelling the prod
             <h2>Comparison with baselines</h2>
 
             <p class="lead" align="justify">
-                We present here samples from MusicCaps, used for the subjective study presented in Table 1 of our paper.
+                We present here samples from our internal dataset. For each method except Mustango 20 seconds of audio are generated, and 10 seconds are retained based on an offset chosen at random.
+                For Mustango we were only able to generate 10 seconds of audio (the generation task is therefore a little bit easier compared to other baselines).
                 </p><ul class="lead" align="justify">
                   <li>The conditioning is a textual description obtained from the MusicCaps annotation </li>
                   <li>MusicGen-MMD is our proposed method, using the EnCodec-MMD codec with promoted independence between codebooks </li>
                   <li>MusicGen is retrained on the same internal dataset using similar instructions as in [1] </li>
                   <li>AudioLDM [2] is a latent diffusion model using CLAP audio-textual embeddings </li>
                   <li>AudioLDM2-Music is the music-specialized checkpoint of AudioLDM2 [3], which in addition to its predecessor [3] also leverages self-supervised general audio representation </li>
-                  <li>MusTango [4] is another latent diffusion model providing fine-grained control over music components such as rythm, chords, etc. It must be noted that MusTango was trained on an augmented version of MusicCaps, which is the test set here, and therefore largely overfits to the testing condition </li>
+                  <li>Mustango [4] is another latent diffusion model providing fine-grained control over music components such as rythm, chords, etc.  </li>
 
                 </ul>
             <p></p>
